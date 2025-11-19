@@ -39,10 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.LastNameTxtbxUpdate = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.StudentIdTxtbxUpdate = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GenderComboBoxUpdate = new System.Windows.Forms.ComboBox();
             this.ProgramComboBoxUpdate = new System.Windows.Forms.ComboBox();
+            this.StudentIDComboBoxUpdate = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // UpdateFormBtn
@@ -54,6 +54,7 @@
             this.UpdateFormBtn.TabIndex = 33;
             this.UpdateFormBtn.Text = "Update";
             this.UpdateFormBtn.UseVisualStyleBackColor = true;
+            this.UpdateFormBtn.Click += new System.EventHandler(this.UpdateFormBtn_Click);
             // 
             // label7
             // 
@@ -86,6 +87,7 @@
             this.AgeTxtbxUpdate.Size = new System.Drawing.Size(172, 29);
             this.AgeTxtbxUpdate.TabIndex = 26;
             this.AgeTxtbxUpdate.Text = "";
+            this.AgeTxtbxUpdate.TextChanged += new System.EventHandler(this.AgeTxtbxUpdate_TextChanged);
             // 
             // label5
             // 
@@ -106,6 +108,7 @@
             this.MiddleNameTxtbxUpdate.Size = new System.Drawing.Size(172, 29);
             this.MiddleNameTxtbxUpdate.TabIndex = 24;
             this.MiddleNameTxtbxUpdate.Text = "";
+            this.MiddleNameTxtbxUpdate.TextChanged += new System.EventHandler(this.MiddleNameTxtbxUpdate_TextChanged);
             // 
             // label4
             // 
@@ -126,6 +129,7 @@
             this.FirstNameTxtbxUpdate.Size = new System.Drawing.Size(172, 29);
             this.FirstNameTxtbxUpdate.TabIndex = 22;
             this.FirstNameTxtbxUpdate.Text = "";
+            this.FirstNameTxtbxUpdate.TextChanged += new System.EventHandler(this.FirstNameTxtbxUpdate_TextChanged);
             // 
             // label3
             // 
@@ -146,6 +150,7 @@
             this.LastNameTxtbxUpdate.Size = new System.Drawing.Size(172, 29);
             this.LastNameTxtbxUpdate.TabIndex = 20;
             this.LastNameTxtbxUpdate.Text = "";
+            this.LastNameTxtbxUpdate.TextChanged += new System.EventHandler(this.LastNameTxtbxUpdate_TextChanged);
             // 
             // label2
             // 
@@ -158,14 +163,6 @@
             this.label2.Size = new System.Drawing.Size(117, 30);
             this.label2.TabIndex = 19;
             this.label2.Text = "Last Name:";
-            // 
-            // StudentIdTxtbxUpdate
-            // 
-            this.StudentIdTxtbxUpdate.Location = new System.Drawing.Point(162, 41);
-            this.StudentIdTxtbxUpdate.Name = "StudentIdTxtbxUpdate";
-            this.StudentIdTxtbxUpdate.Size = new System.Drawing.Size(172, 29);
-            this.StudentIdTxtbxUpdate.TabIndex = 18;
-            this.StudentIdTxtbxUpdate.Text = "";
             // 
             // label1
             // 
@@ -186,6 +183,7 @@
             this.GenderComboBoxUpdate.Name = "GenderComboBoxUpdate";
             this.GenderComboBoxUpdate.Size = new System.Drawing.Size(172, 21);
             this.GenderComboBoxUpdate.TabIndex = 34;
+            this.GenderComboBoxUpdate.SelectedIndexChanged += new System.EventHandler(this.GenderComboBoxUpdate_SelectedIndexChanged);
             // 
             // ProgramComboBoxUpdate
             // 
@@ -194,16 +192,26 @@
             this.ProgramComboBoxUpdate.Name = "ProgramComboBoxUpdate";
             this.ProgramComboBoxUpdate.Size = new System.Drawing.Size(172, 21);
             this.ProgramComboBoxUpdate.TabIndex = 35;
+            this.ProgramComboBoxUpdate.SelectedIndexChanged += new System.EventHandler(this.ProgramComboBoxUpdate_SelectedIndexChanged);
+            // 
+            // StudentIDComboBoxUpdate
+            // 
+            this.StudentIDComboBoxUpdate.FormattingEnabled = true;
+            this.StudentIDComboBoxUpdate.Location = new System.Drawing.Point(163, 41);
+            this.StudentIDComboBoxUpdate.Name = "StudentIDComboBoxUpdate";
+            this.StudentIDComboBoxUpdate.Size = new System.Drawing.Size(172, 21);
+            this.StudentIDComboBoxUpdate.TabIndex = 36;
+            this.StudentIDComboBoxUpdate.SelectedIndexChanged += new System.EventHandler(this.StudentIDComboBoxUpdate_SelectedIndexChanged);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 367);
+            this.Controls.Add(this.StudentIDComboBoxUpdate);
             this.Controls.Add(this.ProgramComboBoxUpdate);
             this.Controls.Add(this.GenderComboBoxUpdate);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.StudentIdTxtbxUpdate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.UpdateFormBtn);
             this.Controls.Add(this.LastNameTxtbxUpdate);
@@ -217,6 +225,7 @@
             this.Controls.Add(this.AgeTxtbxUpdate);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,9 +243,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox LastNameTxtbxUpdate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox StudentIdTxtbxUpdate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox GenderComboBoxUpdate;
         private System.Windows.Forms.ComboBox ProgramComboBoxUpdate;
+        private System.Windows.Forms.ComboBox StudentIDComboBoxUpdate;
     }
 }

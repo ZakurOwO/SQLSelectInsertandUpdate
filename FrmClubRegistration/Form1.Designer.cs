@@ -187,6 +187,8 @@
             // ProgramCombobox
             // 
             this.ProgramCombobox.FormattingEnabled = true;
+            this.ProgramCombobox.Items.AddRange(new object[] {
+            "Sample"});
             this.ProgramCombobox.Location = new System.Drawing.Point(329, 40);
             this.ProgramCombobox.Name = "ProgramCombobox";
             this.ProgramCombobox.Size = new System.Drawing.Size(253, 21);
@@ -196,6 +198,8 @@
             // GenderCombobox
             // 
             this.GenderCombobox.FormattingEnabled = true;
+            this.GenderCombobox.Items.AddRange(new object[] {
+            "Sample"});
             this.GenderCombobox.Location = new System.Drawing.Point(181, 186);
             this.GenderCombobox.Name = "GenderCombobox";
             this.GenderCombobox.Size = new System.Drawing.Size(253, 21);
@@ -281,6 +285,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.ListOfClubMembersview)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
